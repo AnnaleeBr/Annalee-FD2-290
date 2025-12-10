@@ -163,9 +163,12 @@ export default {
     },
   },
   methods: {
-    resetForm() {
-      this.date = '2019-06-15';
-      this.crop = null;
+    resetForm(sticky = false) {
+      //Annalee's changes here
+      if (!sticky) {
+        this.date = '2019-06-15';
+        this.crop = null;
+      }
       this.pickedPlant = null;
       this.quantity = 1;
       this.unit = null;
